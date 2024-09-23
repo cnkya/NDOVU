@@ -1,0 +1,93 @@
+/*phone*/
+
+@media (max-width: 640px) {
+    html {
+        font-size: 10px;
+    }
+    .hamburger-btn {
+        display: inline-flex;
+
+    }
+    .hamburger-btn span {
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: var(--neutral-color);
+        margin: 6px auto;
+
+    }
+    /* Toggle Function*/
+
+    #checkBox:not(:checked)~.nav-options {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    #checkBox:checked~.nav-options {
+        height: auto;
+        overflow: auto;
+    }
+
+    header {
+        height: max-content;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .nav-options {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-options a {
+        margin: 1rem;
+    }
+
+}
+
+@media (max-width: 1007px) {
+    html {
+        font-size: 12px;
+    }
+
+    .about-section{
+    flex-direction: column;
+}
+.about-image-container{
+    width: 100%;
+}
+    .about-image-container img {
+        width: 30%;}
+
+        .about-description-container {
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+    .project-section {
+        flex-direction: column;
+    }
+
+    }
+    .project-card {
+        width:100%;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        object-position: center 75%;
+    }
+
+    .project-card a {
+        width: 100%;
+    }
+
+
+
+

@@ -1,0 +1,120 @@
+/*About Me*/
+.about-section {
+    padding: 2%;
+}
+
+.about-image-container img {
+    width: 100%;
+    
+}
+
+.about-image-container {
+
+    width: 100%;
+}
+
+.about-descriptions-container {
+    
+    width: 70%;
+}
+
+.about-descriptions-container p {
+    width: 90%;
+    margin: 2rem 0;
+}
+
+.skills-list {
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+/* Projects Section */
+
+.projects-section {
+    border: solid red 2px;
+    margin-top: 4rem;
+
+}
+
+.projects-list {    
+    margin: 2rem 0px;
+}
+
+.project-card {
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+.project-card:hover {
+    opacity: 0.5;
+    border: solid 1px var(--primary-color);
+}
+
+.project-card image{
+    width: 100%;
+}
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+a p:nth-child(2){
+    font-size: 1.5rem;
+    color: pink;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+a p:nth-child(4) {
+    
+    font-style: italic;
+}
+
+/* Experience*/
+
+.experience-section {
+    margin-top: 4rem;
+}
+
+.experience-list {    
+    margin: 2rem 0px;
+}
+
+.experience-card {
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+.experience-card:hover {
+    opacity: 0.5;
+    border: solid 1px var(--primary-color);
+}
+
+.experience-card image {
+    width: 100%;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.experience-card p:nth-child(1){
+    font-size: 1.5rem;
+    color: pink;
+    font-style: italic;
+    font-weight: bolder;
+    margin: .5rem 0px;
+}
+
+.experience-card p:nth-child(3) {
+    font-style: italic;
+}
+
+
+
