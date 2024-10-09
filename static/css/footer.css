@@ -1,0 +1,7 @@
+footer {
+    background-color: var(--surface-color);
+    height: 60px;
+    position: sticky;
+    bottom: 0px;
+
+}
