@@ -24,8 +24,9 @@
         <!-- Left Section-->
 
         <div class="logo center-row">
-            <a href="">
-                <h2>NDOVU</h2>
+            <img src="" alt="NDOVU LOGO">
+            <a href="{% url 'home' %}">
+                <h2>NDOVU GROUP</h2>
             </a>
         </div>
 
@@ -42,9 +43,11 @@
             </div>
             <!-- Menu Option-->
             <div class="nav-options center-row">
-                <a href="">Home</a>
+                <a href="{% url 'home' %}">Home</a>
                 <a href="">Projects</a>
-                <a href="">Contact Us</a>
+                <a href="">Services</a>
+                <a href="">Property Management</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
             </div>
         </nav>
 
@@ -55,18 +58,29 @@
     
 <!-- Left Section-->
     <div class="logo center-row">
+        <img src="" alt="NDOVU LOGO">
         <a href="">
-            <h2>NDOVU</h2>
+            <h2>NDOVU GROUP</h2>
         </a>
     </div>
     <!-- Right Section -->
     <nav class="nav-menu">
-        
+        <!-- Hamburger Button-->
+        <input type="checkbox" id="checkBox">
+            <div class="hamburger-btn">
+                <label for="checkBox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
         <!-- Menu Option-->
         <div class="nav-options center-row">
             <a href="">Home</a>
             <a href="">Projects</a>
-            <a href="">Contact Us</a>
+            <a href="">Services</a>
+            <a href="">Property Management</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
         </div>
     </nav>
     </footer>

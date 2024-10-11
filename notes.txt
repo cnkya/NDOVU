@@ -1,0 +1,4 @@
+div class="about-image-container center-row">
+    <img src="{% static './img/Alabama before.jpg' %}" alt="house">
+    <img src="{% static './img/Alabama after.JPG' %}" alt="house">
+</div>

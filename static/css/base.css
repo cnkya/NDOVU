@@ -1,18 +1,14 @@
 :root {
-    --primary-color:#AF9FFF;
-    --primary-color-100: #D5CCFF;
-    --primary-color-300: #7F66FF;
-
-    --secondary-color: #025834;
-    --secondary-color-600: #04C876;
+    --secondary-color-600: #D8A25E;
     --secondary-color-900: #01321E;
 
-    --neutral-color: #E0E0E0;
+    --neutral-color: #4A4947;
+    --neutral-color: #4A4947;
 
-    --background-color: #1B1B1B;
-    --surface-color: #252525;
+    --background-color: #EADBC8;
+    --surface-color: #1E3E62;
 
-    --lobster-font: "Lobster Two", sans-serif;
+    --Merriweather-font: "Merriweather", sans-serif;
     --DM-font: "DM Sans", sans-serif;
 }
 
@@ -23,6 +19,7 @@
     text-decoration: none;
 
 }
+
 html {
     font-size: 16px;
     background-color: var(--background-color);
@@ -33,6 +30,7 @@ h1 {
     color: var(--secondary-color-600);
     font-size: 2rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 h2{

@@ -1,4 +1,4 @@
-/*About Me*/
+/*About NDOVU*/
 .about-section {
     padding: 2%;
 }
@@ -11,7 +11,7 @@
 
 .about-image-container {
 
-    width: 50%;
+    width: 30%;
     
 }
 
@@ -19,6 +19,9 @@
     
     width: 70%;
 }
+.abobut-descriptions-container div:nth-child(2) {
+    text-align: center;
+    }
 
 .about-descriptions-container p {
     width: 90%;
