@@ -1,11 +1,18 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail
-
+from django.views.generic import TemplateView
 # Create your views here.
 
-def home_view(request):
-    return render(request, 'pages/home.html')
+
+class HomePageView(TemplateView):
+    template_name = "pages/home.html"
+
+class ServicePageView(TemplateView):
+    template_name = "pages/services.html"
+
+
+
 
 
 

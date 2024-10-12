@@ -52,31 +52,23 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0.5rem;
+}    
+.project-card p {
+    width: 90%;
+    margin: 0.5rem 0;
+
 }
 .project-card:hover {
     opacity: 0.5;
     border: solid 1px var(--primary-color);
 }
 
-.project-card image{
+.project-card img{
     width: 100%;
 }
-.project-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-a p:nth-child(2){
-    font-size: 1.5rem;
-    color: pink;
-    font-style: italic;
-    font-weight: bolder;
-}
 
-a p:nth-child(4) {
-    
-    font-style: italic;
-}
+
+
 
 /* Experience*/
 

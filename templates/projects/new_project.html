@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}New Projects{% endblock title %}
+
+{% block content %}
+<h1>Yay! A new project!</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Upload Project">
+</form>
+
+
+{% endblock content %}

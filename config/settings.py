@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pages',
     'accounts',
     'projects',
+    'djmoney',
 ]
 
 MIDDLEWARE = [

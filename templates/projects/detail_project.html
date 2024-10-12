@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ project.name }}{% endblock title %}
+
+{% block content %}
+<div class="projects-list center-row">
+    <div class="project-card">
+        <img src="{{ project.image }}" alt="house before">
+        <h1> {{ project.name }} </h1>
+
+        <p> Started on: {{ project.start_date }} </p>
+        <p> Completed on: {{ project.complete_date }} </p>
+        <p> Task: {{ project.tasks }} </p>
+        <p> Vendor: {{ project.vendor }} </p>
+        <p> Total cost: {{ project.total_cost }} </p>
+        <p> Comments: {{ project.comments }} </p>
+    </div>
+</div>
+
+{% endblock content %}
