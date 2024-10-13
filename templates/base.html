@@ -12,11 +12,11 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
         
-        <link rel="stylesheet" href="{% static './css/base.css' %}">
-        <link rel="stylesheet" href="{% static './css/footer.css' %}">
-        <link rel="stylesheet" href="{% static './css/header.css' %}">
-        <link rel="stylesheet" href="{% static './css/section.css' %}">
-        <link rel="stylesheet" href="{% static './css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static '/css/base.css' %}">
+        <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+        <link rel="stylesheet" href="{% static '/css/header.css' %}">
+        <link rel="stylesheet" href="{% static '/css/section.css' %}">
+        <link rel="stylesheet" href="{% static '/css/responsive.css' %}">
         
     <title>{% block title %}{% endblock title %}</title>
 </head>
@@ -25,7 +25,7 @@
         <!-- Left Section-->
 
         <div class="logo center-row">
-            <img src="{% static './img/NDOVU1.jpg' %}" alt="NDOVU LOGO">
+            <img src="{% static '/img/NDOVU1.jpg' %}" alt="NDOVU LOGO">
             <a href="{% url 'home' %}">
                 <h2>NDOVU GROUP</h2>
             </a>
@@ -45,11 +45,29 @@
             <!-- Menu Option-->
             <div class="nav-options center-row">
                 <a href="{% url 'home' %}">Home</a>
+
+                {% if user.is_authenticated %}  
+
                 <a href="{% url 'list' %}">Projects</a>
                 <a href="{% url 'new' %}">New Project</a>
+
+                {% endif %}
+
                 <a href="{% url 'services' %}">Services</a>
                 <a href="">Property Management</a>
                 <a href="{% url 'contact' %}">Contact Us</a>
+            </div>
+
+            <div class="nav-options"> 
+                {% if user.is_authenticated %}
+
+                
+                    <a href="{% url 'logout' %}">Log Out</a>
+                    
+                {% else %}
+                    <a href="{% url 'login' %}">Log In</a>
+                
+                {% endif %}
             </div>
         </nav>
 
@@ -60,7 +78,7 @@
     
 <!-- Left Section-->
     <div class="logo center-row">
-        <img src="{% static './img/NDOVU1.jpg' %}" alt="NDOVU LOGO">
+        <img src="{% static '/img/NDOVU1.jpg' %}" alt="NDOVU LOGO">
         <a href="{% url 'home' %}">
             <h2>NDOVU GROUP</h2>
         </a>
@@ -79,8 +97,6 @@
         <!-- Menu Option-->
         <div class="nav-options center-row">
             <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'list' %}">Projects</a>
-            <a href="{% url 'new' %}">New Project</a>
             <a href="">Services</a>
             <a href="">Property Management</a>
             <a href="{% url 'contact' %}">Contact Us</a>

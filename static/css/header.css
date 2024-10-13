@@ -7,12 +7,14 @@ header {
 
 /* Left Side */
 .logo{
-    width: 30%;
+    width: 20%;
     height: 100%;
+    gap: 1rem;
 }
 .logo img{
-    width: 10%;
+    width: 20%;
     height: 100%;
+    
 }
 
 
