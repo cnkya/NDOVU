@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView
+        ListView,
+        DetailView,
+        CreateView,
+        UpdateView,
+        DeleteView
 )
 
-from .models import Project
+from .models import Project, Status
+
 # Create your views here.
 
 class ProjectListView(ListView): #scan ops

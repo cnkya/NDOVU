@@ -29,6 +29,7 @@ urlpatterns = [
     path("", include("pages.urls")),
     path("projects/", include("projects.urls")),
     path("users/", include("users.urls")),
+    path("property/", include("property.urls")),
     
     
 ]

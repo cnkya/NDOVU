@@ -4,22 +4,22 @@
 }
 
 .about-image-container img {
-    width: 50%;
-    
+    width: 30%;    
     
 }
 
-.about-image-container {
-
-    width: 30%;
-    
+.left-wrapper {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+.right-wrapper {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -3%;
 }
 
 .about-descriptions-container {
-    
     width: 70%;
 }
-.abobut-descriptions-container div:nth-child(2) {
+.about-descriptions-container div:nth-child(2) {
     text-align: center;
     }
 
@@ -28,12 +28,13 @@
     margin: 2rem 0;
 }
 
-.skills-list {
-    flex-wrap: wrap;
-    width: 70%;
-    gap: 1rem;
-    margin: 2rem 0;
+.indent {
+    align-items: center;
+    margin-right: 20rem;
+    margin-left: 20rem;
 }
+
+
 
 /* Projects Section */
 
@@ -64,7 +65,7 @@
 }
 
 .project-card img{
-    width: 100%;
+    width: 30%;
 }
 
 
