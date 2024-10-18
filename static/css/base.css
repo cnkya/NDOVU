@@ -5,7 +5,7 @@
     --neutral-color: #4A4947;
     --neutral-color: #4A4947;
 
-    --background-color: #EADBC8;
+    --background-color: #f7f3ef;
     --surface-color: #1E3E62;
 
     --Merriweather-font: "Merriweather", sans-serif;
@@ -38,6 +38,7 @@ h2{
     color: var(--secondary-color-600);
     font-size: 1.8rem;
     letter-spacing: 0.06rem;
+    
 
 }
 

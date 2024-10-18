@@ -6,28 +6,27 @@
 {% block content %}
 
 
-    <section class="projects-section center-column">
+    <section class="projects-section center-column ">
         <h2>Projects</h2>
 
 
-{% for project in project_list %}
     <div class="projects-list">
+    {% for project in project_list %}
         <div class="project-card">
-    
-            <img src="{{ project.image }}" alt="house before">
+            
+            <img src="{{ project.image.url }}" alt="house before">
                 <h2> {{ project.name }} </h2>
                 <p> Start on: {{ project.start_date }} </p>
                 <p> Completed on: {{ project.complete_date }} </p>
                 <p> Total Cost: {{ project.total_cost }} </p>
                 <p> Comments: {{ project.comments|truncatechars:64 }} </p>
-                
-
-                <a href="{% url 'detail' project.id %}">Continue reading...</a>
+                <a href="{% url 'update' project.id %}">Update /</a>
+                <a href="{% url 'detail' project.id %}">More details</a>
                 
             
         </div>
+        {% endfor %}
     </div>
-{% endfor %}
 </section>
 
 {% endblock content %}

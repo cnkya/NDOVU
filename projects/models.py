@@ -5,12 +5,7 @@ from django.contrib.auth import get_user_model
 
 # Create your models here.
 
-class Status(models.Model):
-    name = models.CharField(max_length=128)
-    comments = models.CharField(max_length=256)
 
-    def __str__(self):
-        return self.name
 
 class Project(models.Model):
     name = models.CharField(max_length=128)
@@ -21,6 +16,7 @@ class Project(models.Model):
     comments = models.TextField()
     start_date = models.DateTimeField(auto_now_add=True)
     complete_date = models.DateTimeField(auto_now_add=True)
+    
     
 
     def __str__(self):

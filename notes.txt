@@ -4,3 +4,31 @@ div class="about-image-container center-row">
 </div>
 
 <input type="submit" class="btn btn-success" value="Log In">
+
+
+        form = ContactForm(request.POST) #to validate the information
+
+        if form.is_valid():
+            print("Sending")
+
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            email_message = f"Name: {name}\nEmail: {email}\nMessage:\n {message}"
+
+            send_mail(
+                "Email from: " + name,
+                email_message,
+                email,
+                ["christina.nkya@sdgku.edu"]
+
+            )
+
+        else:
+            print("Invalid Form")
+    else:
+        #display form
+        form = ContactForm()
+
+    return render(request, 'pages/contact.html', {'form': form})

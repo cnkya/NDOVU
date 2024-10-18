@@ -7,7 +7,7 @@ from django.views.generic import (
         DeleteView
 )
 
-from .models import Project, Status
+from .models import Project
 
 # Create your views here.
 
@@ -23,6 +23,7 @@ class ProjectCreateView(CreateView): #create new records
 class ProjectUpdateView(UpdateView): #update current records
         template_name = "projects/update_project.html"
         model = Project
+        fields = ["name", "image", "tasks", "vendor", "total_cost", "comments" ]
 
 class ProjectDetailView(DetailView): # read single, reads a single copy for read-only
         template_name = "projects/detail_project.html"
