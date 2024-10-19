@@ -8,15 +8,15 @@
     
 
     <form id="emailForm" method="POST" action="." class="center-column">
-        <h1>Contact Me</h1>
-        <h2>Lets <span>talk</span>!</h2>
+        <h1>Contact Us</h1>
+        <h2>Lets<span>talk</span>!</h2>
         {% csrf_token %}
 
         {{ form.name }}
         {{ form.email }}
         {{ form.message }}
 
-        <button class="primary-button">Submit</button>
+        <button class="primary-button">Send</button>
     </form>
 
 </section>

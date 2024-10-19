@@ -32,3 +32,5 @@ div class="about-image-container center-row">
         form = ContactForm()
 
     return render(request, 'pages/contact.html', {'form': form})
+
+    fields = ["name", "image", "tasks", "vendor", "total_cost", "comments" ]

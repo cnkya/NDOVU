@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}New Projects{% endblock title %}
+
+{% block content %}
+<h1>Yay! A new property to manage!</h1>
+<section class="center-row">
+
+
+    <form method="post" action=".">
+        {% csrf_token %}
+        <h1>Yay! A new property to manage!</h1>
+
+        <div>
+            <label class="form-label">Property Name</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Property address</label>
+            <textarea class="form-control" name ="image"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Property type</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Number of Units</label>
+            <textarea class="form-control" name ="number"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Year Built</label>
+            <textarea class="form-control" name ="number"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Sq.ft</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Acquired Date</label>
+            <textarea class="form-control" name ="date"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Purchase price</label>
+            <textarea class="form-control" name ="price"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Market Value</label>
+            <textarea class="form-control" name ="price"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Monthly rent</label>
+            <textarea class="form-control" name ="price"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Operating Expenses</label>
+            <textarea class="form-control" name ="price"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Mortgage Details</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Tenant Name</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Lease Terms</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Rent payment status</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Scheduled Maintenance</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Vendor</label>
+            <textarea class="form-control" name ="text"></textarea>
+        </div>
+        <div>
+            <label class="form-label">Cost</label>
+            <textarea class="form-control" name ="price"></textarea>
+        </div>
+        
+
+        <button type="submit" class="btn btn-outline-primary">Send</button>
+        
+        
+        
+        
+
+
+    </form>
+    </section>
+
+{% endblock content %}

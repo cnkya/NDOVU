@@ -19,6 +19,7 @@ class ProjectCreateView(CreateView): #create new records
         template_name = "projects/new_project.html"
         model = Project
         fields = ["name", "image", "tasks", "vendor", "total_cost", "comments" ]
+        
 
 class ProjectUpdateView(UpdateView): #update current records
         template_name = "projects/update_project.html"

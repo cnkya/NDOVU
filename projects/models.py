@@ -15,7 +15,7 @@ class Project(models.Model):
     total_cost = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
     comments = models.TextField()
     start_date = models.DateTimeField(auto_now_add=True)
-    complete_date = models.DateTimeField(auto_now_add=True)
+    complete_date = models.DateTimeField(null=True, blank=True)
     
     
 
