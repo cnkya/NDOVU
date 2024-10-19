@@ -8,8 +8,11 @@ from django.views.generic import TemplateView
 class HomePageView(TemplateView):
     template_name = "pages/home.html"
 
-class ServicePageView(TemplateView):
-    template_name = "pages/services.html"
+class PropertyPageView(TemplateView):
+    template_name = "pages/management_services.html"
+
+class RemodelPageView(TemplateView):
+    template_name = "pages/remodel.html"
 
 
 

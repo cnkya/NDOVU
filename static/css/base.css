@@ -1,71 +1,64 @@
 :root {
-    --secondary-color-600: #D8A25E;
-    --secondary-color-900: #01321E;
+  --secondary-color-600: #d8a25e;
+  --neutral-color: #4a4947;
+  --neutral-color: #4a4947;
+  --background-color: #fdfdfd;
+  --surface-color: #1e3e62;
 
-    --neutral-color: #4A4947;
-    --neutral-color: #4A4947;
-
-    --background-color: #f7f3ef;
-    --surface-color: #1E3E62;
-
-    --Merriweather-font: "Merriweather", sans-serif;
-    --DM-font: "DM Sans", sans-serif;
+  --Merriweather-font: "Merriweather", sans-serif;
+  --DM-font: "DM Sans", sans-serif;
 }
 
-*{
-    font-family: var(--DM-font);
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-
+* {
+  font-family: var(--DM-font);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 html {
-    font-size: 16px;
-    background-color: var(--background-color);
-
+  font-size: 16px;
+  background-color: var(--background-color);
 }
 
 h1 {
-    color: var(--secondary-color-600);
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
+  color: var(--secondary-color-600);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-h2{
-    font-family: var(--lobster-font);
-    color: var(--secondary-color-600);
-    font-size: 1.8rem;
-    letter-spacing: 0.06rem;
-    
-
+h2 {
+  font-family: var(--lobster-font);
+  color: var(--secondary-color-600);
+  font-size: 1.8rem;
+  letter-spacing: 0.06rem;
 }
 
-p{
-    color: var(--neutral-color);
-    line-height: 1.5rem;
-    font-size: 1.1rem;
+p {
+  color: var(--neutral-color);
+  line-height: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .text-label {
-    color: var(--background-color);
-    background-color: var(--primary-color-100);
-    text-decoration: uppercase;
-    font-weight: 600;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
+  color: var(--background-color);
+  background-color: var(--primary-color-100);
+  text-decoration: uppercase;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
 }
 
 .center-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center-column {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

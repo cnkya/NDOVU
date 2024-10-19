@@ -3,6 +3,7 @@
 @media (max-width: 640px) {
   html {
     font-size: 10px;
+    margin-bottom: 50px;
   }
   .hamburger-btn {
     display: inline-flex;

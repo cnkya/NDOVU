@@ -5,6 +5,7 @@ from pages import views
 
 urlpatterns = [
     path("", views.HomePageView.as_view(), name="home"),
-    path("service/", views.ServicePageView.as_view(), name="services"),
+    path("property/", views.PropertyPageView.as_view(), name="property"),
+    path("remodel/", views.RemodelPageView.as_view(), name="remodel"),
 
 ]
