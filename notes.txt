@@ -34,3 +34,6 @@ div class="about-image-container center-row">
     return render(request, 'pages/contact.html', {'form': form})
 
     fields = ["name", "image", "tasks", "vendor", "total_cost", "comments" ]
+
+    <a href="{% url 'update' project.id %}">Update /</a>
+            <a href="{% url 'detail' project.id %}">More details</a>

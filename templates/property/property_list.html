@@ -5,12 +5,24 @@
 
 {% block content %}
 <section class="projects-section center-column ">
-    <h2>Projects</h2>
+    <h2>Property</h2>
 
 
 <div>
-
-   
+    {% for property in property_list %}
+    <div class="project-card">
+        
+        <img src="" alt="house">
+            <h2> {{ property.property_name }} </h2>
+            <p> Address: {{ property.address }} </p>
+            <p> Property Type: {{ property.property_type }} </p>
+            <p> Acquired Date: {{ property.acquired_date }} </p>
+            
+            
+            
+        
+    </div>
+    {% endfor %}
 </div>
 </section>
 

@@ -77,4 +77,11 @@
   height: 200px;
 }
 
+/*New Property page*/
+.property-form {
+  width: 400px;
+  display: inline-block;
+  border: 1px solid red;
+  align-items: top baseline;
+}
 /* Contact page */

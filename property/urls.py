@@ -4,7 +4,8 @@ from property import views
 
 
 urlpatterns = [
-path("", views.PropertyListView.as_view(), name="propertylist"),
+path("property/", views.PropertyListView.as_view(), name="propertylist"),
 path("<int:pk>/", views.PropertyDetailView.as_view(), name="propertydetail"),
-path("new/", views.PropertyCreateView.as_view(), name="propertynew"),
+path("new/", views.create_property_page, name="propertynew"),
+path("save_property/", views.create_property, name="save_property"),
 ]

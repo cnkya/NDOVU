@@ -24,13 +24,13 @@ class PropertyFinance(models.Model):
     mortgage_details = models.TextField()
     property = models.ForeignKey(PropertyManagement, null=True, blank=True, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.purchase_price
+    #def __str__(self):
+        #return self.purchase_price
 
 class PropertyTenantInfo(models.Model):
     name = models.CharField(max_length=128)
     lease_terms = models.CharField(max_length=50)
-    Rent_payment_status = models.CharField(max_length=10)
+    rent_payment_status = models.CharField(max_length=10)
     property = models.ForeignKey(PropertyManagement, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):

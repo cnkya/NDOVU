@@ -4,90 +4,105 @@
 {% block title %}New Projects{% endblock title %}
 
 {% block content %}
-<h1>Yay! A new property to manage!</h1>
-<section class="center-row">
+
+<section class="project-section center-row">
 
 
-    <form method="post" action=".">
+    <form method="post" action="{% url 'save_property' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <h1>Yay! A new property to manage!</h1>
-
+    <section class="property-form">
+        <div>
+        <h2> Property Info</h2>
+        
+            <label class="form-label">Image</label>
+            <input type="file" class="form-control" name="image">
+        </div>
         <div>
             <label class="form-label">Property Name</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="property_name"></textarea>
         </div>
         <div>
             <label class="form-label">Property address</label>
-            <textarea class="form-control" name ="image"></textarea>
+            <textarea class="form-control" name ="address"></textarea>
         </div>
         <div>
             <label class="form-label">Property type</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="property_type"></textarea>
         </div>
         <div>
             <label class="form-label">Number of Units</label>
-            <textarea class="form-control" name ="number"></textarea>
+            <textarea class="form-control" name ="number_of_units"></textarea>
         </div>
         <div>
             <label class="form-label">Year Built</label>
-            <textarea class="form-control" name ="number"></textarea>
+            <textarea class="form-control" name ="year_built"></textarea>
         </div>
         <div>
             <label class="form-label">Sq.ft</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="square_footage"></textarea>
         </div>
         <div>
             <label class="form-label">Acquired Date</label>
-            <textarea class="form-control" name ="date"></textarea>
+            <textarea class="form-control" name ="acquired_date"></textarea>
         </div>
+</section>
+<section class="property-form">
+        <h2> Property Finance Information:</h2>
         <div>
             <label class="form-label">Purchase price</label>
-            <textarea class="form-control" name ="price"></textarea>
+            <textarea class="form-control" name ="purchase_price"></textarea>
         </div>
         <div>
             <label class="form-label">Market Value</label>
-            <textarea class="form-control" name ="price"></textarea>
+            <textarea class="form-control" name ="market_value"></textarea>
         </div>
         <div>
             <label class="form-label">Monthly rent</label>
-            <textarea class="form-control" name ="price"></textarea>
+            <textarea class="form-control" name ="monthly_rent"></textarea>
         </div>
         <div>
             <label class="form-label">Operating Expenses</label>
-            <textarea class="form-control" name ="price"></textarea>
+            <textarea class="form-control" name ="operating_expenses"></textarea>
         </div>
         <div>
             <label class="form-label">Mortgage Details</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="mortgage_details"></textarea>
         </div>
+</section>
+<section class="property-form">
+        <h2> Tenant Information:</h2>
         <div>
             <label class="form-label">Tenant Name</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="name"></textarea>
         </div>
         <div>
             <label class="form-label">Lease Terms</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="lease_terms"></textarea>
         </div>
         <div>
             <label class="form-label">Rent payment status</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="Rent_payment_status"></textarea>
         </div>
+</section>
+<section class="property-form">
+        <h2> Maintenance Log:</h2>
         <div>
             <label class="form-label">Scheduled Maintenance</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="scheduled_maintenance"></textarea>
         </div>
         <div>
             <label class="form-label">Vendor</label>
-            <textarea class="form-control" name ="text"></textarea>
+            <textarea class="form-control" name ="vendor"></textarea>
         </div>
         <div>
             <label class="form-label">Cost</label>
-            <textarea class="form-control" name ="price"></textarea>
+            <textarea class="form-control" name ="cost"></textarea>
         </div>
-        
-
+        </section>
+        <div>
         <button type="submit" class="btn btn-outline-primary">Send</button>
-        
+        </div>
         
         
         
