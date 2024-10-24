@@ -75,6 +75,13 @@ def create_property(request):
         tenant.save()
         
 
-        maintenance = PropertyMaintenanceInfo.objects.create()
+        maintenance = PropertyMaintenanceInfo.objects.create(
+                scheduled_maintenance = request.POST.get('scheduled_maintenance'),
+                vendor = request.POST.get('vendor'),
+                cost = request.POST.get('cost'),
 
-        return redirect('home')
+                property = property
+        )
+        maintenance.save()
+
+        return redirect('propertylist')

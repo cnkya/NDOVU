@@ -80,7 +80,9 @@
 /*New Property page*/
 .property-form {
   width: 400px;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+
   border: 1px solid red;
   align-items: top baseline;
 }
