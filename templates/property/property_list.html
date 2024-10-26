@@ -8,22 +8,23 @@
     <h2>Property</h2>
 
 
-<div>
-    {% for property in property_list %}
-    <div class="project-card">
-        
-        <img src="" alt="house">
-            <h2> {{ property.property_name }} </h2>
-            <p> Address: {{ property.address }} </p>
-            <p> Property Type: {{ property.property_type }} </p>
-            <p> Acquired Date: {{ property.acquired_date }} </p>
-            
-            
-            
-        
+
+    <div class="projects-list">
+        {% for propertymanagement in propertymanagement_list %}
+            <div class="project-card">
+                
+                <img src="{{ project.image.url }}" alt="house">
+                
+                <p> Address: {{ propertymanagement.address }} </p>
+                <p> Acquired Date: {{ propertymanagement.acquired_date }} </p>
+                <a href="{% url 'property_detail' propertymanagement.id %}">More details</a>
+                
+                    
+                
+            </div>
+            {% endfor %}
+    
     </div>
-    {% endfor %}
-</div>
 </section>
 
 {% endblock content %}

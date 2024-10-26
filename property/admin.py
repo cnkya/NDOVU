@@ -4,6 +4,7 @@ from .models import PropertyFinance, PropertyMaintenanceInfo, PropertyManagement
 
 # Register your models here.
 
+    
 
 admin.site.register(PropertyManagement)
 admin.site.register(PropertyTenantInfo)

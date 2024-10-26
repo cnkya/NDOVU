@@ -14,6 +14,7 @@ from .models import PropertyManagement, PropertyFinance, PropertyTenantInfo, Pro
 class PropertyListView(ListView): #scan ops
         template_name = "property/property_list.html"
         model = PropertyManagement
+        #context_object_name = 'properties'
         
 
 #class PropertyCreateView(CreateView): #create new records
@@ -33,6 +34,34 @@ class PropertyUpdateView(UpdateView): #update current records
 
 class PropertyDetailView(DetailView): # read single, reads a single copy for read-only
         template_name = "property/property_detail.html"
+        model = PropertyManagement
+
+        def get_context_data(self, **kwargs):
+                # get the context
+                context = super().get_context_data(**kwargs)
+
+                # get the property 
+                property = self.object
+
+                # load related models.
+                finance = PropertyFinance.objects.filter(property=property).first()
+                context["propertyfinance"] = finance
+
+                tenant =  PropertyTenantInfo.objects.filter(property=property).first()
+                context["propertytenantinfo"] = tenant
+
+                maintenance = PropertyMaintenanceInfo.objects.filter(property=property).first()
+                context["propertymaintenanceinfo"] = maintenance
+
+
+
+
+
+
+
+                return context
+
+
         
 def create_property_page(request):
         return render(request, "property/property_new.html")

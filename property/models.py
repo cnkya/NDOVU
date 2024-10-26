@@ -19,7 +19,7 @@ class PropertyManagement(models.Model):
 class PropertyFinance(models.Model):
     purchase_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
     market_value = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
-    monthly_rent =  MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
+    monthly_rent = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
     operating_expenses = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
     mortgage_details = models.TextField()
     property = models.ForeignKey(PropertyManagement, null=True, blank=True, on_delete=models.CASCADE)

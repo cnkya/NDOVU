@@ -4,12 +4,45 @@
 {% block title %}hi{% endblock title %}
 
 {% block content %}
-<div>
-    <div>
+<div class="projects-list center-row">
+    <div class="project-card">
         <img src="" alt="house">
-        <h1> hi</h1>
 
+        <h1> {{ propertymanagement.adress }} </h1>
+        
+        <p>  {{ propertymanagement.property_name }} </p>
+        <p> Type: {{ propertymanagement.property_type }} </p>
+        <p> No. of Units: {{ propertymanagement.number_of_units }} </p>
+        <p> Year Built: {{ propertymanagement.year_built }} </p>
+        <p> Sq.ft: {{ propertymanagement.square_footage }} </p>
+        <p> Acquired Date: {{ propertymanagement.acquired_date }} </p>
+<div class="projects-list center-row">
+    
+        <h1> Property Finance</h1>
+        <p> Purchase price: {{ propertyfinance.purchase_price }} </p>
+        <p> Market Value: {{ propertyfinance.market_value }} </p>
+        <p> Monthly Rent: {{ propertyfinance.monthly_rent }} </p>
+        <p> Operating Expenses: {{ propertyfinance.operating_expenses }} </p>
+        <p> Mortgage Details: {{ propertyfinance.mortgage_detail }} </p>
+        <p>  {{ propertyfinance.property }} </p>
+</div>
+<div>
 
+        <h1>Tenant Information</h1>
+        <p> Tenant Name: {{ propertytenantinfo.name }} </p>
+        <p> Lease Terms: {{ propertytenantinfo.lease_terms }} </p>
+        <p> Payment Status: {{ propertytenantinfo.rent_payment_status }} </p>
+        <p>  {{ propertytenantinfo.property }} </p>
+    </div>
+<div class="projects-list center-row" >
+
+        <h1>Maintenance Information</h1>
+        <p> Scheduled Maintenace: {{ propertymaintenanceinfo.scheduled_maintenance }} </p>
+        <p>Vendor: {{ propertymaintenanceinfo.vendor }} </p>
+        <p> Cost: {{ propertymaintenanceinfo.cost }} </p>
+        <p>  {{ propertymaintenanceinfo.property }} </p>
+        
+</div>
         
     </div>
 </div>
