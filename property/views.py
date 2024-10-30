@@ -28,9 +28,16 @@ class PropertyListView(ListView): #scan ops
         
         
 
-class PropertyUpdateView(UpdateView): #update current records
-        template_name = "property/property_update.html"
-        
+#class PropertyUpdateView(UpdateView): #update current records
+        #template_name = "property/property_update.html"
+        #model = PropertyManagement
+        #get the property
+        # property = self.object
+        # load related models
+                
+
+        #return redirect('property_detail')
+                
 
 class PropertyDetailView(DetailView): # read single, reads a single copy for read-only
         template_name = "property/property_detail.html"
@@ -52,14 +59,10 @@ class PropertyDetailView(DetailView): # read single, reads a single copy for rea
 
                 maintenance = PropertyMaintenanceInfo.objects.filter(property=property).first()
                 context["propertymaintenanceinfo"] = maintenance
-
-
-
-
-
-
-
                 return context
+        
+        
+
 
 
         
@@ -113,4 +116,82 @@ def create_property(request):
         )
         maintenance.save()
 
-        return redirect('propertylist')
+        return redirect('property_list')
+
+
+
+class PropertyUpdateDetailView(DetailView): # read single, reads a single copy for read-only
+        template_name = "property/property_update.html"
+        model = PropertyManagement
+
+        def get_context_data(self, **kwargs):
+                # get the context
+                context = super().get_context_data(**kwargs)
+
+                # get the property 
+                property = self.object
+
+                # load related models.
+                finance = PropertyFinance.objects.filter(property=property).first()
+                context["propertyfinance"] = finance
+
+                tenant =  PropertyTenantInfo.objects.filter(property=property).first()
+                context["propertytenantinfo"] = tenant
+
+                maintenance = PropertyMaintenanceInfo.objects.filter(property=property).first()
+                context["propertymaintenanceinfo"] = maintenance
+                return context
+        
+
+
+def update_property(request):
+        
+        # get property
+        property_id = request.POST.get('property_id')
+
+        #get related data fields/models
+        property = PropertyManagement.objects.get(id=property_id)
+        property.property_name = request.POST.get('property_name')
+        property.image = request.POST.get('image')
+        property.address= request.POST.get('address')
+        property.property_type= request.POST.get('property_type')
+        property.number_of_units= request.POST.get('number_of_units')
+        property.year_built= request.POST.get('year_built')
+        property.square_footage= request.POST.get('square_footage')
+        property.acquired_date= request.POST.get('acquired_date')
+
+        #save the data
+        property.save()
+
+        #get related data fields/models
+        finance = PropertyFinance.objects.filter(property=property).first()
+        finance.purchase_price = request.POST.get('purchase_price')
+        finance.market_value = request.POST.get('market_value')
+        finance.monthly_rent = request.POST.get('monthly_rent')
+        finance.operating_expenses = request.POST.get('operating_expenses')
+        finance.mortgage_details = request.POST.get('mortgage_details')
+
+        #save the data
+        finance.save()
+
+        #get related data fields/models
+        tenant = PropertyTenantInfo.objects.filter(property=property).first()
+        tenant.name = request.POST.get('name')
+        tenant.lease_terms = request.POST.get('lease_terms')
+        tenant.rent_payment_status =request.POST.get('rent_payment_status')
+
+        #save the data
+        tenant.save()
+        
+
+        #get related data fields/models
+        maintenance = PropertyMaintenanceInfo.objects.filter(property=property).first()
+        maintenance.scheduled_maintenance = request.POST.get('scheduled_maintenance')
+        maintenance.vendor = request.POST.get('vendor')
+        maintenance.cost = request.POST.get('cost')
+
+        #save the data
+        maintenance.save()
+
+        # redirect user to deails page after update
+        return redirect('property_detail')

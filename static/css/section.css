@@ -46,6 +46,7 @@
   width: 400px;
   display: inline-block;
   border: 1px solid #efefed;
+  margin-bottom: 2rem;
 }
 .project-card p {
   width: 90%;
@@ -79,11 +80,11 @@
 
 /*New Property page*/
 .property-form {
-  width: 400px;
+  width: 300px;
   display: inline-flex;
   flex-direction: column;
 
-  border: 1px solid red;
+  border: 1px solid #e6e6ae;
   align-items: top baseline;
 }
 /* Contact page */
