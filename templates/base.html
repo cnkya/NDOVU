@@ -55,24 +55,26 @@
                 <a href="{% url 'new' %}">New Project</a>
                 <a href="{% url 'property_list' %}">Property Mgnt Admin</a>
                 <a href="{% url 'property_new' %}">New Property </a>
+
+
+
                 {% endif %}
 
                 <a href="{% url 'remodel' %}">Home Remodeling</a>
                 <a href="{% url 'property' %}">Property Management</a>
 
                 <a href="{% url 'contact' %}">Contact Us</a>
-            </div>
 
-            <div class="nav-options">
                 {% if user.is_authenticated %}
-
                 <a href="{% url 'logout' %}">Log Out</a>
-
                 {% else %}
-                <a href="{% url 'login' %}">Log In</a>
 
+                <a href="{% url 'login' %}">Log In</a>
                 {% endif %}
+
             </div>
+
+
         </nav>
 
     </header>
