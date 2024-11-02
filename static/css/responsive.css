@@ -33,6 +33,12 @@
     padding: 2%;
   }
 
+  footer {
+    height: max-content;
+    flex-direction: column;
+    padding: 2%;
+  }
+
   .logo {
     width: 60%;
   }
