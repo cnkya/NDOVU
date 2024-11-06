@@ -50,6 +50,18 @@ git push heroku main
 
 # add to create a database on heroku
 python3 -m pip install django-heroku
+heroku addons:create heroku-postgresql:essential-0
 
 If that doesnt work then just add manually to the req.txt django-heroku==0.3.1
 psycopg2==2.9.10 and then deploy
+
+# if you do any changes to your models
+# run migrations locally
+python manage.py makemigrations
+
+# deploy the new version of the code
+# apply the migrations in heroku
+heroku run python manage.py migrate
+
+# create a superuser in heroku
+heroku run python manage.py createsuperuser
