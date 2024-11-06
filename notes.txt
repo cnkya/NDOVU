@@ -47,3 +47,9 @@ python3 -m pip freeze > requirements.txt
 git add .
 git commit -m "ANY MESSAGE HERE" 
 git push heroku main
+
+# add to create a database on heroku
+python3 -m pip install django-heroku
+
+If that doesnt work then just add manually to the req.txt django-heroku==0.3.1
+psycopg2==2.9.10 and then deploy

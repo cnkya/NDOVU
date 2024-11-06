@@ -157,3 +157,10 @@ EMAIL_USE_SSL = False
 
 EMAIL_HOST_USER = env('HOST_EMAIL')
 EMAIL_HOST_PASSWORD = env('HOST_PASSWORD')
+
+
+# If this code is running in Heroku
+#use heroku db instead of db.sqlite3
+if 'DYNO' in os.environ:
+    import django_heroku
+    django_heroku.settings(locals())
