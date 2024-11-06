@@ -2,11 +2,7 @@
 {%endblock title %} {% block content %}
 
 <section class="project-section center-row">
-  <form
-    method="post"
-    action="{% url 'save_property' %}"
-    enctype="multipart/form-data"
-  >
+  <form method="post" action="{% url 'save_property' %}" enctype="multipart/form-data">
     {% csrf_token %}
     <h1>Add New Property</h1>
     <section class="property-form">
@@ -26,11 +22,7 @@
       </div>
       <div>
         <label class="form-label">Property Type:</label>
-        <input
-          list="typelistOptions"
-          class="form-control"
-          name="property_type"
-        />
+        <input list="typelistOptions" class="form-control" name="property_type" />
         <datalist id="typelistOptions">
           <option value="Commercial"></option>
           <option value="Residential"></option>
@@ -85,11 +77,7 @@
 
       <div>
         <label class="form-label">Lease Terms:</label>
-        <input
-          list="termslistOptions"
-          class="form-control"
-          name="lease_terms"
-        />
+        <input list="termslistOptions" class="form-control" name="lease_terms" />
         <datalist id="termslistOptions">
           <option value="12 months"></option>
           <option value="6 months"></option>
@@ -116,8 +104,8 @@
         <input type="number" class="form-control" name="cost" />
       </div>
     </section>
-    <div class="center row">
-      <button type="submit" class="btn btn-outline-dark">Add</button>
+    <div class="center row col-6 mx-auto">
+      <button type="submit" class="btn btn-outline-dark col-6 mx-auto">Add</button>
     </div>
   </form>
 </section>

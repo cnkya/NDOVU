@@ -37,3 +37,13 @@ div class="about-image-container center-row">
 
     <a href="{% url 'update' project.id %}">Update /</a>
             <a href="{% url 'detail' project.id %}">More details</a>
+
+
+# update requirements
+python3 -m pip freeze > requirements.txt
+
+
+# deploy
+git add .
+git commit -m "ANY MESSAGE HERE" 
+git push heroku main
