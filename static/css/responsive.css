@@ -1,6 +1,6 @@
 /*phone*/
 
-@media (max-width: 640px) {
+@media (max-width: 942px) {
   html {
     font-size: 10px;
     margin-bottom: 50px;
@@ -28,19 +28,19 @@
   }
 
   header {
-    height: max-content;
+    height: 80px;
     flex-direction: column;
-    padding: 2%;
   }
 
   footer {
-    height: max-content;
+    height: 80px;
     flex-direction: column;
-    padding: 2%;
   }
 
   .logo {
-    width: 60%;
+    width: 6%;
+    padding-right: 20%;
+    margin-top: 2rem;
   }
 
   .nav-options {
@@ -60,9 +60,13 @@
   }
 }
 
-@media (max-width: 1007px) {
+@media (max-width: 1645px) {
   html {
     font-size: 12px;
+  }
+
+  .logo {
+    padding-right: 15%;
   }
 
   .about-section {
