@@ -1,6 +1,6 @@
 header {
   background-color: var(--surface-color);
-  height: 60px;
+  height: 90px;
   position: sticky;
   top: 0px;
   z-index: 9999;
@@ -38,7 +38,7 @@ header {
 }
 
 .nav-options a:hover {
-  border-bottom: solid 2px var(--primary-color);
+  border-bottom: solid 2px var(--background-color);
 }
 
 #checkBox,

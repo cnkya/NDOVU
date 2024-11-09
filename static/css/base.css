@@ -1,11 +1,10 @@
 :root {
   --secondary-color-600: #d8a25e;
-  --neutral-color: #4a4947;
-  --neutral-color: #4a4947;
+  
   --background-color: #fdfdfd;
   --surface-color: #1e3e62;
 
-  --Merriweather-font: "Merriweather", sans-serif;
+  
   --DM-font: "DM Sans", sans-serif;
 }
 
@@ -35,20 +34,13 @@ h2 {
   letter-spacing: 0.06rem;
 }
 
+
 p {
-  color: var(--neutral-color);
   line-height: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
-.text-label {
-  color: var(--background-color);
-  background-color: var(--primary-color-100);
-  text-decoration: uppercase;
-  font-weight: 600;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-}
+
 
 .center-row {
   display: flex;

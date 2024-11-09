@@ -4,7 +4,7 @@ from django.views.generic import (
         DetailView,
         CreateView,
         UpdateView,
-        DeleteView
+        
 )
 
 from .models import PropertyManagement, PropertyFinance, PropertyTenantInfo, PropertyMaintenanceInfo
