@@ -40,14 +40,17 @@
 
 .projects-list {
   margin: 2rem 0px;
+  
 }
 
 .project-card {
   width: 400px;
   display: inline-block;
-  border: 1px solid #efefed;
+  border: 5px solid #1e3e6280;
   margin-bottom: 2rem;
-  align-items: top baseline;
+  vertical-align: top; 
+  padding: 1rem;
+
 }
 .project-card p {
   width: 90%;
@@ -84,8 +87,9 @@
   width: 300px;
   display: inline-flex;
   flex-direction: column;
-  border: 1px solid #e6e6ae;
+  border: 5px solid #1e3e6280;
   align-items: top baseline;
+  padding: 1rem;
 }
 
 /* Contact page */

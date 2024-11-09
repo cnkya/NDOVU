@@ -7,6 +7,11 @@
   }
   .hamburger-btn {
     display: inline-flex;
+    position: absolute;  
+    right: 20px;        
+    top: 20px;          
+    z-index: 100;       
+    background: none; 
   }
   .hamburger-btn span {
     display: block;
@@ -30,6 +35,7 @@
   header {
     height: 80px;
     flex-direction: column;
+    position: relative;  
   }
 
   footer {
@@ -44,13 +50,21 @@
   }
 
   .nav-options {
-    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
-  }
+    background: white;  
+    z-index: 99;
+    flex-direction: column;
+}
 
-  .nav-options a {
+.nav-options a {
     margin: 1rem;
-  }
+    display: block;     
+    text-align: center; 
+    padding: 0.5rem;    
+}
 
   .project-card img {
     width: 100%;
@@ -58,6 +72,19 @@
     object-fit: cover;
     object-position: center 100%;
   }
+  .remodel-image-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.remodel-image-container img {
+    height: 150px;  
+}
+.button {
+  margin: 0.55rem;    
+  display: block;     
+  width: calc(100% - 2rem);  
+  margin: 1rem;
+}
 }
 
 @media (max-width: 1645px) {

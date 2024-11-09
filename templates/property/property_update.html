@@ -4,15 +4,17 @@ content%}
 
 {% block content %}
 
-<div class="projects-list center-row">
-    <form method="POST" action="{% url 'save_changes' %}">
+<div class="project-section center-row">
+    <form method="POST" action="{% url 'save_changes' %}" enctype="multipart/form-data">
 
-        <input type="hidden" value="{{property.id}}" name="property_id">
+        <input type="hidden"  name="property_id" value="{{property.id}}">
+        <h1>Update Property</h1>
 
-        <div class="project-card">
+        <section class="property-form">
+        
             {% csrf_token %}
-            <h1>Add New Property</h1>
-            <section class="property-form">
+            
+            
                 <div>
                     <h2> Property Info:</h2>
 

@@ -148,6 +148,7 @@ def update_property(request):
         
         # get property
         property_id = request.POST.get('property_id')
+        
 
         #get related data fields/models
         property = PropertyManagement.objects.get(id=property_id)
