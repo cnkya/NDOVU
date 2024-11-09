@@ -8,7 +8,7 @@ Management{% endblock title %} {% block content %}
     {% for propertymanagement in propertymanagement_list %}
     <div class="project-card">
       <img src="" alt="house" />
-
+      <p> property id: {{ property.id}} </p>
       <p>Address: {{ propertymanagement.address }}</p>
       <p>Acquired Date: {{ propertymanagement.acquired_date }}</p>
       <a href="{% url 'property_detail' propertymanagement.id %}"

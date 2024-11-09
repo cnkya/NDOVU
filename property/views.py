@@ -120,11 +120,11 @@ def create_property(request):
 
 
 
-class PropertyUpdateDetailView(DetailView): # read single, reads a single copy for read-only
+class PropertyUpdateDetailView(DetailView): 
         template_name = "property/property_update.html"
         model = PropertyManagement
 
-        def get_context_data(self, **kwargs):
+        def get_context_data(self, **kwargs): # this function will pull up a detail list when you click on update button on property list page
                 # get the context
                 context = super().get_context_data(**kwargs)
 
@@ -144,7 +144,7 @@ class PropertyUpdateDetailView(DetailView): # read single, reads a single copy f
         
 
 
-def update_property(request):
+def update_property(request): # this function is to save the data you altered or added in the update details page
         
         # get property
         property_id = request.POST.get('property_id')
