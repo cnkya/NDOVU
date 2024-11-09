@@ -5,7 +5,7 @@ content%}
 {% block content %}
 
 <div class="project-section center-row">
-    <form method="POST" action="{% url 'save_changes' %}" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'save_changes' property.id %}" >
 
         <input type="hidden"  name="property_id" value="{{property.id}}">
         <h1>Update Property</h1>
@@ -133,7 +133,7 @@ content%}
                 </div>
             </section>
             <div class="center row">
-                <button type="submit" class="btn btn-outline-dark">Add</button>
+                <button type="submit" class="btn btn-outline-dark">Update</button>
             </div>
 
 
