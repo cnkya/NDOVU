@@ -195,4 +195,4 @@ def update_property(request): # this function is to save the data you altered or
         maintenance.save()
 
         # redirect user to deails page after update
-        return redirect('property_detail')
+        return redirect('property_detail', pk=property_id )

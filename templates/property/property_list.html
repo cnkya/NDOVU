@@ -4,11 +4,13 @@ Management{% endblock title %} {% block content %}
 <section class="projects-section center-column">
   <h1>Property List</h1>
 
-  <div class="object-fit-cover border rounded">
+  <div class="">
     {% for propertymanagement in propertymanagement_list %}
     <div class="project-card">
-      <img src="" alt="house" />
-      <p> property id: {{ property.id}} </p>
+      {% if propertymanagement.image %}
+    <img src="{{ propertymanagement.image.url }}" alt="house" />
+    {% endif %}
+      
       <p>Address: {{ propertymanagement.address }}</p>
       <p>Acquired Date: {{ propertymanagement.acquired_date }}</p>
       <a href="{% url 'property_detail' propertymanagement.id %}"

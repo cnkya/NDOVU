@@ -7,7 +7,7 @@ content%}
 <div class="project-section center-row">
     <form method="POST" action="{% url 'save_changes' %}" enctype="multipart/form-data" >
 
-        <input type="hidden"  name="property_id" value="{{property_id}}">
+        <input type="hidden"  name="property_id" value="{{ propertymanagement.id }}">
         <h1>Update Property</h1>
 
         <section class="property-form">
@@ -24,12 +24,12 @@ content%}
 
                 <div>
                     <label class="form-label">Property Name:</label>
-                    <textarea class="form-control" name="property_name">{{propertymanagement.name}}</textarea>
+                    <textarea class="form-control" name="property_name">{{ propertymanagement.name }}</textarea>
                 </div>
 
                 <div>
                     <label class="form-label">Property Address:</label>
-                    <textarea class="form-control" name="address">{{propertymanagement.address}}</textarea>
+                    <textarea class="form-control" name="address">{{ propertymanagement.address }}</textarea>
                 </div>
 
                 <div>
