@@ -15,9 +15,6 @@ content%}
             
         <section class="property-form">
         
-            
-            
-            
                 <div>
                     <h2> Property Info:</h2>
 
@@ -26,8 +23,8 @@ content%}
                 </div>
 
                 <div>
-                    <label class="form-label">Property Name:</label>
-                    <textarea class="form-control" name="property_name">{{ propertymanagement.name }}</textarea>
+                    <label class="form-label">Property Owner:</label>
+                    <textarea class="form-control" name="property_ownwer">{{ propertymanagement.owner }}</textarea>
                 </div>
 
                 <div>
@@ -135,14 +132,12 @@ content%}
                     <input type="number" class="form-control" name="cost" value="{{ propertymaintenanceinfo.cost }}">
                 </div>
             </section>
+
+            <section>
             <div class="center row">
                 <button type="submit" class="btn btn-outline-dark">Update</button>
             </div>
-
-
-
-
-
+            </section>
     </form>
     </section>
 

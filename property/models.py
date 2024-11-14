@@ -4,7 +4,7 @@ from djmoney.models.fields import MoneyField
 # Create your models here.
 
 class PropertyManagement(models.Model):
-    property_name = models.CharField(max_length=128)
+    property_owner = models.CharField(max_length=128)
     image = models.ImageField(upload_to="static/img")
     address = models.CharField(max_length=200)
     property_type = models.CharField(max_length=50)
@@ -14,7 +14,7 @@ class PropertyManagement(models.Model):
     acquired_date = models.DateField()
 
     def __str__(self):
-        return self.property_name
+        return self.property_owner
 
 class PropertyFinance(models.Model):
     purchase_price = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')

@@ -7,8 +7,7 @@
 <h1>Add New Project</h1>
 <section class="center-row">
 
-
-<form method="POST" enctype="multipart/form-data">
+<form method="POST"  enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Upload Project">

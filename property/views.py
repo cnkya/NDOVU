@@ -72,7 +72,7 @@ def create_property_page(request):
 def create_property(request):
         # Create record
         property = PropertyManagement.objects.create(
-                property_name = request.POST.get('property_name'),
+                property_owner = request.POST.get('property_owner'),
                 image = request.POST.get('image'),
                 address= request.POST.get('address'),
                 property_type= request.POST.get('property_type'),
@@ -152,7 +152,7 @@ def update_property(request): # this function is to save the data you altered or
 
         #get related data fields/models
         property = PropertyManagement.objects.get(id=property_id)
-        property.property_name = request.POST.get('property_name')
+        property.property_owner = request.POST.get('property_owner')
         property.image = request.POST.get('image')
         property.address= request.POST.get('address')
         property.property_type= request.POST.get('property_type')

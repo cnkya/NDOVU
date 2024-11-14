@@ -19,13 +19,15 @@
                 <p> Start on: {{ project.start_date }} </p>
                 <p> Completed on: {{ project.complete_date }} </p>
                 <p> Total Cost: {{ project.total_cost }} </p>
-                <p> Comments: {{ project.comments|truncatechars:64 }} </p>
-                <a href="{% url 'update' project.id %}">Update /</a>
-                <a href="{% url 'detail' project.id %}">More details</a>
                 
+                
+                <a href="{% url 'detail' project.id %}">More details /</a>
+                <a href="{% url 'update' project.id %}">Update</a>
             
         </div>
+        
         {% endfor %}
+        <a href="{% url 'home' %}" class="back-button">← Back</a>
     </div>
 </section>
 

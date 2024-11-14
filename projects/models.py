@@ -14,8 +14,8 @@ class Project(models.Model):
     vendor = models.CharField(max_length=50)
     total_cost = MoneyField(max_digits=14, decimal_places=2, default_currency='USD')
     comments = models.TextField()
-    start_date = models.DateTimeField(auto_now_add=True)
-    complete_date = models.DateTimeField(null=True, blank=True)
+    start_date = models.DateField(null=True, blank=True)
+    complete_date = models.DateField(null=True, blank=True)
     
     
 

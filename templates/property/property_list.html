@@ -14,12 +14,13 @@ Management{% endblock title %} {% block content %}
       <p>Address: {{ propertymanagement.address }}</p>
       <p>Acquired Date: {{ propertymanagement.acquired_date }}</p>
       <a href="{% url 'property_detail' propertymanagement.id %}"
-        >More details</a
+        >More details /</a
       >
       <a href="{% url 'property_update' propertymanagement.id %}">Update</a>
     </div>
     {% endfor %}
   </div>
+  <a href="{% url 'home' %}" class="back-button">← Back</a>
 </section>
 
 {% endblock content %}

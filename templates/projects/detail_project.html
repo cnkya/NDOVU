@@ -15,9 +15,8 @@
         <p> Vendor: {{ project.vendor }} </p>
         <p> Total cost: {{ project.total_cost }} </p>
         <p> Comments: {{ project.comments }} </p>
-
-        
     </div>
+    <a href="{% url 'list' %}" class="back-button">← Back</a>
 </div>
 
 {% endblock content %}
