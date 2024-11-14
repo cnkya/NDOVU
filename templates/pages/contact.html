@@ -9,14 +9,14 @@
 
     <form id="emailForm" method="POST" action="." class="center-column">
         <h1>Contact Us</h1>
-        <h2>Lets<span>talk</span>!</h2>
+        
         {% csrf_token %}
-
+    
         {{ form.name }}
         {{ form.email }}
         {{ form.message }}
 
-        <button class="primary-button">Send</button>
+        <button class="btn btn-outline-dark">Send</button>
     </form>
 
 </section>

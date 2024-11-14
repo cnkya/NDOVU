@@ -11,7 +11,7 @@ class PropertyManagement(models.Model):
     number_of_units = models.CharField(max_length=10)
     year_built = models.TextField()
     square_footage = models.CharField(max_length=10)
-    acquired_date = models.DateTimeField(auto_now_add=True)
+    acquired_date = models.DateField()
 
     def __str__(self):
         return self.property_name
