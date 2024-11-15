@@ -6,9 +6,11 @@
 
 {% block content %}
 <h1>Log In</h1>
+<section class="center-row">
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn btn-outline-dark" value="Log In">
     </form>
+</section>
     {% endblock content%}
