@@ -5,6 +5,31 @@
     font-size: 10px;
     margin-bottom: 50px;
   }
+
+
+  .project-card img {
+    width: 90%;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center 100%;
+  }
+  .details-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-property {
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .details-property img {
+    height: 150px;
+  }
   .hamburger-btn {
     display: inline-flex;
     position: absolute;  
@@ -66,12 +91,7 @@
     padding: 0.5rem;    
 }
 
-  .project-card img {
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
-    object-position: center 100%;
-  }
+
   .remodel-image-container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
@@ -79,15 +99,19 @@
 .remodel-image-container img {
     height: 150px;  
 }
+
 .button {
-  margin: 0.55rem;    
-  display: block;     
-  width: calc(100% - 2rem);  
-  margin: 1rem;
+  margin-left: auto;      
+  margin-right: auto;
+  margin-bottom: 3rem;    
+  width: 90%;            
+  max-width: 200px;      
+  top: -3rem;           
+  position: relative;
 }
 }
 
-@media (max-width: 1645px) {
+@media (max-width: 1007px) {
   html {
     font-size: 12px;
   }
@@ -110,6 +134,10 @@
     width: 100%;
     margin: 2rem 0;
   }
-
+  .project-card {
+    width: 350px;
+    margin-left: 4rem;
+    margin-right: 10px;
+  }
   
 }

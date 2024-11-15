@@ -29,6 +29,7 @@
 /* Projects page */
 
 .projects-section {
+  
   margin-top: 4rem;
   position: relative;
 }
@@ -63,6 +64,19 @@
 }
 .project-card a {
   width: 100%;
+}
+
+.new-project-container{
+  display:flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; 
+  padding: 1rem;
+  border: 3px solid rgba(30, 62, 98, 0.5);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+  margin-right: 3rem; 
+  margin-left: 2rem;
+  
 }
 /*Service page*/
 
@@ -99,7 +113,11 @@
 }
 
 /*Property details Page*/
-
+.details-container{
+  align-items: baseline;
+  margin-top: 4rem;
+  position: relative;
+}
 .details-property {
   width: 400px;
   display: inline-block;
@@ -110,6 +128,7 @@
   margin-right: 1.5rem; 
   margin-left: 0rem;
   text-align: justify;
+  align-items: baseline;
 }
 
 .details-property img {
@@ -121,12 +140,21 @@
 
 /* Contact page */
 .contact-section {
-
+margin-top: 3rem;
   
 }
 
-.update-project{
-  align-items: left;
+
+
+/*Buttons*/
+
+.button {
+margin-left: 75rem;
+position: relative;
+top: -10rem;  
+width: 100px;
+text-align: center;
+
 }
 .back-button {
   display: inline-block;
