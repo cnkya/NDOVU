@@ -6,7 +6,9 @@
   <div class="details-property">
     <h1>Property Information</h1>
     
+    {% if propertymanagement.image %}
     <img src="{{ propertymanagement.image.url }}" alt="house" />
+    {% endif %}
     
 
     <p>Address:{{ propertymanagement.adress }}</p>

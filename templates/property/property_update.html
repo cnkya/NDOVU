@@ -19,7 +19,11 @@ content%}
                 <div>
                     <h2> Property Info:</h2>
 
-                    <label class="form-label">Image:</label>
+                    {% if propertymanagement.image %}
+                    <img src="{{ propertymanagement.image.url }}" alt="house" width="265px" />
+                    {% endif %}
+
+                    <label class="form-label">Change Image:</label>
                     <input type="file" class="form-control" name="image" value="{{ propertymanagement.image }}" />
                 </div>
 
