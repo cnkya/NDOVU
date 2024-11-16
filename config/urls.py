@@ -35,4 +35,5 @@ urlpatterns = [
 ]
 #config to server images
 
+
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -152,8 +152,8 @@ def update_property(request): # this function is to save the data you altered or
 
         #get related data fields/models
         property = PropertyManagement.objects.get(id=property_id)
-        property.property_owner = request.POST.get('property_owner')
-        property.image = request.POST.get('image')
+        property.property_owner= request.POST.get('property_owner')
+        property.image= request.POST.get('image')
         property.address= request.POST.get('address')
         property.property_type= request.POST.get('property_type')
         property.number_of_units= request.POST.get('number_of_units')
@@ -194,5 +194,5 @@ def update_property(request): # this function is to save the data you altered or
         #save the data
         maintenance.save()
 
-        # redirect user to deails page after update
+        # redirect user to details page after update
         return redirect('property_detail', pk=property_id )

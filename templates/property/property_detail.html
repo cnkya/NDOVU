@@ -4,12 +4,11 @@
 <section class=" details-container center-row">
   <div class="details-property">
     <h1>Property Information</h1>
-    {% if propertymanagement.image %}
+    
     <img src="{{ propertymanagement.image.url }}" alt="house" />
-    {% endif %}
+    
 
-    <h1>{{ propertymanagement.adress }}</h1>
-
+    <p>Address:{{ propertymanagement.adress }}</p>
     <p>Owner: {{ propertymanagement.property_owner }}</p>
     <p>Type: {{ propertymanagement.property_type }}</p>
     <p>No. of Units: {{ propertymanagement.number_of_units }}</p>
@@ -38,7 +37,7 @@
       <p>
         Scheduled Maintenace: {{ propertymaintenanceinfo.scheduled_maintenance }} </p>
       <p>Vendor: {{ propertymaintenanceinfo.vendor }}</p>
-      <p>Cost: {{ propertymaintenanceinfo.cost }}</p>
+      <p>Cost: {{ propertymaintenanceinfo.cost.amount }}</p>
       <p>{{ propertymaintenanceinfo.property }}</p>
     </div>
     <a href="{% url 'property_list' %}" class="back-button">← Back</a>

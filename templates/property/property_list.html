@@ -7,9 +7,12 @@ Management{% endblock title %} {% block content %}
   <div class="">
     {% for propertymanagement in propertymanagement_list %}
     <div class="project-card">
+      
       {% if propertymanagement.image %}
-      <img src="{{ propertymanagement.image.url }}" alt="house" />
-      {% endif %}
+    <img src="{{ propertymanagement.image.url }}" alt="house" />
+    {% endif %}
+
+      
       
       <p>Address: {{ propertymanagement.address }}</p>
       <p>Acquired Date: {{ propertymanagement.acquired_date }}</p>
